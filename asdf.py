@@ -18,7 +18,7 @@ db.connect(db_user, db_pass, db_name, db_host, db_port)
 
 data = data_generator(data_cnt)
 
-for test_func in [query_tester]:
+for test_func in [insert_tester, query_tester]:
     test = test_func.__name__.replace("_tester", "")
     times = {
         "original": {"max": 0, "min": inf, "tot": 0},
